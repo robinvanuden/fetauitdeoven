@@ -7,6 +7,15 @@ export default defineNuxtConfig({
     "@nuxt/hints",
     "@nuxt/image",
     "@nuxt/ui",
+    "@nuxtjs/robots",
   ],
+  icon: {
+    serverBundle: {
+      collections: ["lucide"],
+      mode: "server",
+    },
+  },
+  css: ["~/assets/css/master.css"],
+  site: { indexable: false },
   devtools: { enabled: true },
 });
