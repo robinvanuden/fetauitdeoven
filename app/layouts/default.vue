@@ -44,17 +44,16 @@ const items = computed<NavigationMenuItem[]>(() => [
     to: "/",
   },
   {
-    label: "Over ons",
-    to: "/about",
-  },
-  {
     label: "Kookclub",
-    to: "/club",
+    to: "/blog",
   },
   {
     label: "Recepten",
     to: "/kookboek",
   },
+  {
+    label: "Over ons",
+    to: "/about",
+  },
 ]);
 </script>
-<style scoped></style>

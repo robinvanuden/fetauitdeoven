@@ -1,11 +1,10 @@
 <template>
-  <UContainer>
     <UPageSection
       title="Onze recente avonturen"
       :links="[
         {
           label: 'Meer zien',
-          to: '/club',
+          to: '/blog',
           color: 'neutral',
         },
       ]"
@@ -21,13 +20,12 @@
         </UBlogPosts>
       </template>
     </UPageSection>
-  </UContainer>
 </template>
 <script setup lang="ts">
 import type { BlogPostProps, UserProps } from "@nuxt/ui";
 
-const { data: clubs } = await useAsyncData("latest-club", () => {
-  return queryCollection("club").order("date", "DESC").limit(3).all();
+const { data: clubs } = await useAsyncData("latest-blog", () => {
+  return queryCollection("blog").order("date", "DESC").limit(3).all();
 });
 
 const items = computed<BlogPostProps[]>(
@@ -36,7 +34,7 @@ const items = computed<BlogPostProps[]>(
       title: b.title,
       date: b.date,
       description: b.description,
-      to: `/club/${b.date.replaceAll("-", "")}-${b.path.replace("/club/", "")}`,
+      to: `/blog/${b.date.replaceAll("-", "")}-${b.path.replace("/blog/", "")}`,
       authors: b.chef?.map<UserProps>(useChefAvatar),
       image: {
         ...b.image,
