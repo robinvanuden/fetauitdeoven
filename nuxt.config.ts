@@ -10,12 +10,10 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
   ],
   icon: {
-    serverBundle: {
-      collections: ["lucide"],
-      mode: "server",
-    },
+    mode: "server",
+    serverBundle: { collections: ["lucide"] },
   },
-  css: ["~/assets/css/master.css"],
+  css: ["~/assets/css/main.css"],
   site: { indexable: false },
   devtools: { enabled: true },
 });

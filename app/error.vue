@@ -36,4 +36,3 @@ const links = computed(() => [
   },
 ]);
 </script>
-<style scoped></style>
