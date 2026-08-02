@@ -7,16 +7,23 @@ export default defineAppConfig({
     },
     pageSection: {
       slots: {
-        title: "font-serif"
-      }
+        title: "font-serif",
+      },
     },
     pageHero: {
       slots: {
-        title: "font-serif"
-      }
+        title: "font-serif",
+      },
     },
     blogPost: {
-      defaultVariants: {variant: "subtle"},
+      slots: { image: "rounded-3xl", root: "rounded-3xl" },
+      defaultVariants: { variant: "subtle" },
+    },
+    changelogVersion: {
+      slots: {
+        image: "object-center rounded-3xl",
+        imageWrapper: "aspect-video",
+      },
     },
   },
-})
+});

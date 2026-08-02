@@ -7,7 +7,7 @@
       <NuxtImg
         v-if="section.image"
         v-bind="section.image"
-        class="rounded-lg"
+        class="rounded-3xl"
         width="600"
       />
       <small class="text-dimmed mt-2 block"
@@ -19,4 +19,3 @@
 <script setup lang="ts">
 const { data: section } = await useSection("about", "oorsprong");
 </script>
-<style scoped></style>
