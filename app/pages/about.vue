@@ -1,5 +1,7 @@
 <template>
-  <!-- Placeholder PageHero voor Over Ons -->
-  <AboutHero />
-  <AboutIntro />
+  <div id="about">
+    <AboutHero />
+    <AboutIntro />
+  </div>
 </template>
+<script setup lang="ts"></script>

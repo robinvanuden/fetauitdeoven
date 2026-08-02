@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare",
     "clean": "nuxt prepare && nuxt cleanup",
     "lint": "eslint .",
-    "lint:fix": "eslint ."
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",

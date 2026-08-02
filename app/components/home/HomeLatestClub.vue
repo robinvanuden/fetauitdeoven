@@ -1,25 +1,21 @@
 <template>
-    <UPageSection
-      title="Onze recente avonturen"
-      :links="[
-        {
-          label: 'Meer zien',
-          to: '/blog',
-          color: 'neutral',
-        },
-      ]"
-      :ui="{ title: 'md:text-left font-serif tracking-wider' }"
-    >
-      <template #body>
-        <UBlogPosts>
-          <UBlogPost
-            v-for="(item, index) in items"
-            :key="index"
-            v-bind="item"
-          />
-        </UBlogPosts>
-      </template>
-    </UPageSection>
+  <UPageSection
+    title="Onze recente avonturen"
+    :links="[
+      {
+        label: 'Meer zien',
+        to: '/blog',
+        color: 'neutral',
+      },
+    ]"
+    :ui="{ title: 'md:text-left font-serif tracking-wider' }"
+  >
+    <template #body>
+      <UBlogPosts>
+        <UBlogPost v-for="(item, index) in items" :key="index" v-bind="item" />
+      </UBlogPosts>
+    </template>
+  </UPageSection>
 </template>
 <script setup lang="ts">
 import type { BlogPostProps, UserProps } from "@nuxt/ui";

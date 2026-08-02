@@ -1,12 +1,11 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
 
-const ImageSchema = z
-  .object({
-    src: z.string(),
-    alt: z.string(),
-  })
+const ImageSchema = z.object({
+  src: z.string(),
+  alt: z.string(),
+});
 
-const Chefs = z.enum(["andrea", 'lisa', "raymond", "robin"])
+const Chefs = z.enum(["andrea", "lisa", "raymond", "robin"]);
 
 export default defineContentConfig({
   collections: {

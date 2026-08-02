@@ -1,7 +1,7 @@
-import type {UserProps} from "@nuxt/ui"
+import type { UserProps } from "@nuxt/ui";
 
 export const useChefAvatar = (chef: string): UserProps => {
-  const name = chef.charAt(0).toUpperCase() + chef.slice(1)
+  const name = chef.charAt(0).toUpperCase() + chef.slice(1);
   return {
     name: name,
     avatar: {
