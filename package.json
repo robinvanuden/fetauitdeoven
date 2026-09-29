@@ -1,5 +1,12 @@
 {
   "name": "www-fetauitdeoven-nl",
+  "version": "0.3.0",
+  "url": "https://www.fetauitdeoven.nl",
+  "author": {
+    "name": "Robin van Uden",
+    "email": "hello@robinvanuden.com",
+    "url": "https://robinvanuden.com"
+  },
   "type": "module",
   "private": true,
   "scripts": {
