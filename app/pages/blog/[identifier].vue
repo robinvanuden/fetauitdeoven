@@ -1,26 +1,28 @@
 <template>
-  <UPage>
-    <UPageBody>
-      <UPageSection
-        v-if="blog"
-        :title="blog.title"
-        orientation="horizontal"
-        :ui="{ root: 'min-h-120' }"
-      >
-        <template #top>
-          <NuxtImg
-            v-if="blog.image"
-            v-bind="blog.image"
-            class="object-cover object-center rounded-3xl aspect-banner mx-auto"
-          />
-        </template>
-        <template #description>
-          <NuxtTime :datetime="blog.date" locale="nl" />
-          <ContentRenderer :value="blog.body" />
-        </template>
-      </UPageSection>
-    </UPageBody>
-  </UPage>
+  <UContainer>
+    <UPage>
+      <UPageBody>
+        <UPageSection
+          v-if="blog"
+          :title="blog.title"
+          orientation="horizontal"
+          :ui="{ root: 'min-h-120' }"
+        >
+          <template #top>
+            <NuxtImg
+              v-if="blog.image"
+              v-bind="blog.image"
+              class="object-cover object-center rounded-xl aspect-banner mx-auto"
+            />
+          </template>
+          <template #description>
+            <NuxtTime :datetime="blog.date" locale="nl" />
+            <ContentRenderer :value="blog.body" />
+          </template>
+        </UPageSection>
+      </UPageBody>
+    </UPage>
+  </UContainer>
 </template>
 <script setup lang="ts">
 import type { UserProps } from "@nuxt/ui";
